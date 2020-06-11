@@ -18,6 +18,21 @@ export default new Router({
                     meta: { title: '系统首页' }
                 },
                 {
+                    path: '/usermanagement',
+                    component: () => import('@/views/systemManagement/userManagement'),
+                    meta: { title: '用户管理' }
+                },
+                {
+                    path: '/rolemanagement',
+                    component: () => import('@/views/systemManagement/roleManagement'),
+                    meta: { title: '角色管理' }
+                },
+                {
+                    path: '/rightmanagement',
+                    component: () => import('@/views/systemManagement/rightManagement'),
+                    meta: { title: '权限管理' }
+                },
+                {
                     path: '/icon',
                     component: () => import('components/page/Icon.vue'),
                     meta: { title: '自定义图标' }

@@ -84,7 +84,7 @@ function apiAxios(options) {
     ).catch(function (err) {
         let res = err && err.response;
         onerror && onerror(res);
-        Message.error(res.message || res.msg || res.mes || '请求错误!')
+        Message.error(res.data.message || res.msg || res.mes || '请求错误!')
         if (err === undefined) {
             window.alert('api error, HTTP CODE: ' + res.status);
         }
